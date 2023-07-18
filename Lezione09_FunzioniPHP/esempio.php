@@ -34,16 +34,28 @@ saluta();
 echo $numero;
 */
 
-//-----------
+//----------- Funzioni con PARAMETRI
 
+/*
 $numero = 5;
 
 function somma($valore1, $valore2){
     $somma = $valore1 + $valore2;
     echo $somma;
-    return $somma;
+    //return $somma;
 }
 
 somma($numero, 10);
+*/
+
+$numero = 5;
+
+function somma(int $valore1,int $valore2 = 100): int{ //ho indicato un parametro di default, vale 100 solo se quando chiamo la funzione non indico nulla per quel parametro
+    $somma = $valore1 + $valore2;
+    //echo $somma;
+    return $somma;
+}
+
+echo somma($numero);
 
 ?>
